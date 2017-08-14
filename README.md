@@ -1,5 +1,8 @@
 # docker-elasticsearch-ci
 
+Original repo: [bitjourney/docker-elasticsearch-ci](https://github.com/bitjourney/docker-elasticsearch-ci)
+This fork uses 5.5.1 instead of 5.3.2.
+
 Docker Image for CI Build
 
 <!-- TOC -->
@@ -22,12 +25,12 @@ Docker Image for CI Build
 
 ## Docker Hub
 
-https://hub.docker.com/r/bitjourney/elasticsearch-ci/
+https://hub.docker.com/r/carwow/elasticsearch-ci/
 
 ## Usage
 
 ```sh
-> docker pull bitjourney/elasticsearch-ci
+> docker pull carwow/elasticsearch-ci
 ```
 
 ## Development

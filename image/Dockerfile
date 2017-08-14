@@ -1,7 +1,4 @@
-# fixed the version to ~5.3
-# because Amazon Elasticsearch Service supports until 5.3
-# https://aws.amazon.com/elasticsearch-service/faqs/?nc1=h_ls
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.3.2
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.5.1
 
 ADD elasticsearch.yml /usr/share/elasticsearch/config/
 

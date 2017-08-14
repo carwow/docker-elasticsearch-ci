@@ -16,3 +16,10 @@ xpack.security.enabled: false
 indices.fielddata.cache.size: 40%
 # Checks to see whether the query size is too large before data is loaded
 indices.breaker.fielddata.limit: 50%
+
+# run docker for development use
+#   https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-dev-mode
+# here is why to set 'http.host' and 'transport.host' instead of 'network.host'
+#   https://www.elastic.co/guide/en/elasticsearch/reference/5.3/bootstrap-checks.html#_development_vs_production_mode
+http.host: 0.0.0.0
+transport.host: 127.0.0.1
