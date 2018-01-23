@@ -22,6 +22,7 @@ Docker Image for CI Build
   - https://discuss.circleci.com/t/running-elasticsearch-5/8559/7
 - Disable X-Packs Security
   - because it is not required for CI environment
+- Set the JVM memory limit to 3GB (to not anger the OOM killer)
 
 ## Docker Hub
 
