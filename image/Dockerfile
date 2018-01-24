@@ -11,4 +11,4 @@ RUN elasticsearch-plugin install analysis-kuromoji
 # Details: https://discuss.elastic.co/t/why-is-it-elasticsearch-is-not-allowed-to-run-as-root/60413
 USER elasticsearch
 
-ENV _JAVA_OPTIONS="-Xmx3g -Xms3g"
+ENV _JAVA_OPTIONS="-Xmx1g -Xms1g"
