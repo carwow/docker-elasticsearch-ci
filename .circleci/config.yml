@@ -1,0 +1,36 @@
+version: 2.0
+
+references:
+  defaults: &defaults
+    docker:
+      - image: docker:18-git
+    working_directory: ~/docker-elasticsearch-ci
+
+jobs:
+  build: &build
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: docker build -t carwow/elasticsearch-ci:7.6.1 image/
+  publish: &publish
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: echo -n $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
+      - run: docker push carwow/elasticsearch-ci:7.6.1
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: master
+
+      - publish:
+          filters:
+            branches:
+              only: master
