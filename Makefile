@@ -1,5 +1,5 @@
 BASE_TAG:=carwow/elasticsearch-ci
-VERSION_TAG:=$(BASE_TAG):5.5.1
+VERSION_TAG:=$(BASE_TAG):7.6.1
 
 build:
 		docker build -t $(VERSION_TAG) image/
