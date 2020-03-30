@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: docker build -t carwow/elasticsearch-ci:7.6.1 image/
+      - run: docker build -t carwow/elasticsearch-ci:6.7.2 image/
 
   publish:
     <<: *defaults
@@ -20,8 +20,8 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: echo -n $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
-      - run: docker build -t carwow/elasticsearch-ci:7.6.1 image/
-      - run: docker push carwow/elasticsearch-ci:7.6.1
+      - run: docker build -t carwow/elasticsearch-ci:6.7.2 image/
+      - run: docker push carwow/elasticsearch-ci:6.7.2
 
 workflows:
   version: 2
